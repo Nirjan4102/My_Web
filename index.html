@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nirjan Mondal | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+  <header>
+    <div class="container nav-container">
+      <h2 class="logo">Nirjan<span>.</span></h2>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn animate">🌙</button>
+        <a href="https://wa.me/917501676043" class="btn contact-btn animate" target="_blank">Let's Talk</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-text" data-aos="fade-up">
+        <h3>Hi, I'm <span class="highlight">Nirjan Mondal</span></h3>
+        <h4><span id="typed"></span></h4>
+        <p>B.Tech Computer Science and Engineering student at the University of Kalyani | 5-Star C Programmer on HackerRank | Skilled in C, C++, Java, Python, JavaScript, HTML & CSS | Enthusiastic Web Developer</p>
+        <div class="hero-buttons">
+          <a href="https://wa.me/917501676043" class="btn primary-btn">Let's Talk</a>
+          <a href="#projects" class="btn secondary-btn">See Projects</a>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/nirjan-mondal-863235294/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/Nirjan4102" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.facebook.com/rishabhbhumihaar69" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="hero-img" data-aos="zoom-in">
+        <img src="c.jpg" alt="Nirjan's Photo">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 data-aos="fade-up">About Me</h2>
+      <p data-aos="fade-up" data-aos-delay="100">
+       Hi everyone! I’m <strong>Nirjan Mondal</strong>, a third-year B.Tech student in Computer Science and Engineering at the University of Kalyani. I’m passionate about coding, problem-solving, and everything related to computer science.
+      <p data-aos="fade-up" data-aos-delay="200">
+       Let’s connect and explore exciting opportunities to collaborate, learn, and innovate together!"
+      </p>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 data-aos="fade-up">My Projects</h2>
+      <div class="project-list">
+        <div class="project" data-aos="fade-up">
+          <h3>Micro Learning Tracker</h3>
+          <p>A tool to track daily micro-learning progress for students.</p>
+          <a href="https://github.com/Nirjan4102/Micro-learning-tracker" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project" data-aos="fade-up" data-aos-delay="100">
+          <h3>Meal Market Calculator</h3>
+          <p>Web app to manage meal and guest sharing costs dynamically.</p>
+          <a href="https://github.com/Nirjan4102/Meal-Market-Calculator" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 data-aos="fade-up">Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn primary-btn">Send</button>
+      </form>
+      <p id="form-msg"></p>
+      <p>You can also email me at <a href="mailto:mondalnirjan568@gmail.com">mondalnirjan568@gmail.com</a>.</p>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
