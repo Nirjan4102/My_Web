@@ -1,6 +1,6 @@
 // Typed.js effect
 new Typed("#typed", {
-  strings: ["CSE Student","Website Developer", "Full-Stack Engineer"],
+  strings: ["CSE Student","Web Developer", "Full-Stack Engineer"],
   typeSpeed: 60,
   backSpeed: 30,
   backDelay: 2000,
