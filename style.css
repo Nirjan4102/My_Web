@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #000;
@@ -24,9 +28,9 @@ header {
   padding: 20px 0;
   background-color: #000;
   border-bottom: 1px solid #333;
-  z-index: 1000;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -156,7 +160,7 @@ header {
 }
 
 .social-icons a {
-  font-size: 26px;
+  font-size: 30px;
   margin-right: 20px;
   color: #6C63FF;
   transition: color 0.3s;
@@ -176,7 +180,30 @@ header {
   width: 100%;
   max-width: 300px;
   height: auto;
-  border-radius: 20px;
+  border-radius: 50%;
+  border: 2px solid #6C63FF;
+}
+
+/* About Section */
+.about {
+  padding: 60px 0;
+}
+
+.about h2 {
+  font-size: 32px;
+  text-align: center;
+  color: #6C63FF;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 16px;
+  max-width: 800px;
+  margin: auto;
+  color: #bbb;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 /* Projects Section */
@@ -266,7 +293,7 @@ header {
   font-weight: bold;
 }
 
-/* Animate class (fade-in for buttons on load) */
+/* Animate class */
 .animate {
   opacity: 0;
   transform: translateY(20px);
@@ -368,16 +395,17 @@ body.dark-mode .social-icons a {
   }
 
   .hero-text, .hero-img {
-    flex: 1 1 100%;
-    max-width: 48%;
+    flex: 1 1 45%;
+    text-align: center;
   }
 
   .hero-img img {
-    max-width: 180px;
+    max-width: 150px;
+    margin-top: 10px;
   }
 
   .hero-text h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .hero-text h4 {
@@ -399,5 +427,9 @@ body.dark-mode .social-icons a {
 
   #contact-form {
     width: 100%;
+  }
+
+  .social-icons a {
+    font-size: 28px;
   }
 }
