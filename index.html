@@ -32,16 +32,19 @@
 
   <section class="hero">
     <div class="container hero-container">
-      <div class="hero-img" data-aos="zoom-in">
-        <img src="c.jpg" alt="Nirjan's Photo">
+      <div class="mobile-hero-wrap">
+        <div class="hero-img">
+          <img src="c.jpg" alt="Nirjan's Photo" />
+        </div>
+        <div class="hero-text">
+          <h3>Hi, I'm <span class="highlight">Nirjan Mondal</span></h3>
+          <h4><span id="typed"></span></h4>
+        </div>
       </div>
-      <div class="hero-text" data-aos="fade-up">
-        <h3>Hi, I'm <span class="highlight">Nirjan Mondal</span></h3>
-        <h4><span id="typed"></span></h4>
+
+      <div class="hero-info">
         <p>
-          B.Tech Computer Science and Engineering student at the University of Kalyani |
-          5-Star C Programmer on HackerRank | Skilled in C, C++, Java, Python,
-          JavaScript, HTML & CSS | Enthusiastic Web Developer
+          B.Tech Computer Science and Engineering student at the University of Kalyani | 5-Star C Programmer on HackerRank | Skilled in C, C++, Java, Python, JavaScript, HTML & CSS | Enthusiastic Web Developer
         </p>
         <div class="hero-buttons">
           <a href="https://wa.me/917501676043" class="btn primary-btn">Let's Talk</a>
@@ -56,20 +59,18 @@
     </div>
   </section>
 
-  <!-- About Section -->
   <section id="about" class="about">
     <div class="container">
       <h2 data-aos="fade-up">About Me</h2>
       <p data-aos="fade-up" data-aos-delay="100">
-        Hi everyone! I’m <strong>Nirjan Mondal</strong>, a third-year B.Tech student in Computer Science and Engineering at the University of Kalyani. I’m passionate about coding, problem-solving, and everything related to computer science.
+       Hi everyone! I’m <strong>Nirjan Mondal</strong>, a third-year B.Tech student in Computer Science and Engineering at the University of Kalyani. I’m passionate about coding, problem-solving, and everything related to computer science.
       </p>
       <p data-aos="fade-up" data-aos-delay="200">
-        Let’s connect and explore exciting opportunities to collaborate, learn, and innovate together!
+       Let’s connect and explore exciting opportunities to collaborate, learn, and innovate together!
       </p>
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects" class="projects">
     <div class="container">
       <h2 data-aos="fade-up">My Projects</h2>
@@ -88,7 +89,6 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
       <h2 data-aos="fade-up">Contact Me</h2>
@@ -106,7 +106,52 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    // Typed.js effect
+    new Typed("#typed", {
+      strings: ["CSE Student","Website Developer", "Full-Stack Engineer"],
+      typeSpeed: 60,
+      backSpeed: 30,
+      backDelay: 2000,
+      loop: true,
+    });
+
+    // Dark mode toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+
+    // Contact form validation
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = this.name.value.trim();
+      const email = this.email.value.trim();
+      const message = this.message.value.trim();
+      const msgEl = document.getElementById("form-msg");
+
+      if (!name || !email || !message) {
+        msgEl.textContent = "❌ Please fill out all fields!";
+        msgEl.style.color = "red";
+        return;
+      }
+
+      msgEl.textContent = "✅ Message sent successfully!";
+      msgEl.style.color = "lightgreen";
+      this.reset();
+    });
+
+    // Animate buttons/sections on load
+    document.querySelectorAll(".animate").forEach((el, i) => {
+      el.style.opacity = "0";
+      el.style.transform = "translateY(20px)";
+      setTimeout(() => {
+        el.style.transition = "all 0.6s ease";
+        el.style.opacity = "1";
+        el.style.transform = "translateY(0)";
+      }, 300 + i * 100);
+    });
   </script>
-  <script src="script.js"></script>
 </body>
 </html>
