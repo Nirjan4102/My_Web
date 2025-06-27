@@ -1,4 +1,4 @@
-/* Reset & base */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -24,9 +24,9 @@ header {
   padding: 20px 0;
   background-color: #000;
   border-bottom: 1px solid #333;
-  z-index: 1000;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 .nav-container {
@@ -117,6 +117,7 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  text-align: left;
 }
 
 .hero-text {
@@ -157,8 +158,8 @@ header {
 }
 
 .social-icons a {
-  font-size: 26px; /* increased icon size */
-  margin-right: 18px;
+  font-size: 26px; /* Increased size */
+  margin-right: 20px;
   color: #6C63FF;
   transition: color 0.3s;
 }
@@ -331,56 +332,48 @@ body.dark-mode .social-icons a {
 }
 
 /* ============================= */
-/* 📱 Tablets (768px - 1024px) */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .nav-links {
-    gap: 20px;
-  }
-
-  .hero {
-    padding: 50px 0;
-  }
-
+/* 📱 Tablets and Large Mobiles (≥600px) */
+@media screen and (max-width: 1024px) and (min-width: 600px) {
   .hero-container {
     flex-direction: row;
-    gap: 30px;
+    gap: 20px;
+    align-items: center;
+    text-align: left;
   }
 
   .hero-img img {
-    width: 280px;
+    width: 300px;
   }
 }
 
 /* ============================= */
-/* 📱 Mobiles (max 767px) */
-@media screen and (max-width: 767px) {
-  header {
-    padding: 15px 10px;
-  }
-
+/* 📱 Mobiles (max 599px) */
+@media screen and (max-width: 599px) {
   .nav-container {
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
   }
 
   .nav-links {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    text-align: center;
+    gap: 10px;
   }
 
   .hero-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .hero-text {
+    text-align: left;
   }
 
   .hero-img img {
-    width: 200px;
+    width: 180px;
   }
 
   .hero-text h3 {
