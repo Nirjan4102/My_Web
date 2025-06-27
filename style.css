@@ -343,29 +343,6 @@ body.dark-mode .social-icons a {
   color: #4e46d4;
 }
 
-/* Responsive: Laptops */
-@media screen and (min-width: 1025px) {
-  .hero-container {
-    flex-direction: row;
-  }
-
-  .hero-text,
-  .hero-img {
-    text-align: left;
-  }
-}
-
-/* Responsive: Tablets */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .hero {
-    padding: 60px 0;
-  }
-
-  .hero-img img {
-    max-width: 250px;
-  }
-}
-
 /* Responsive: Mobiles */
 @media screen and (max-width: 767px) {
   header {
@@ -373,25 +350,28 @@ body.dark-mode .social-icons a {
   }
 
   .nav-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   .nav-links {
     flex-direction: row;
-    flex-wrap: wrap;
     gap: 15px;
-    justify-content: center;
-    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .nav-actions {
+    display: flex;
+    gap: 10px;
   }
 
   .hero-container {
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
   }
 
   .hero-text, .hero-img {
@@ -399,9 +379,17 @@ body.dark-mode .social-icons a {
     text-align: center;
   }
 
+  .hero-img {
+    order: 0;
+  }
+
+  .hero-text {
+    order: 1;
+  }
+
   .hero-img img {
-    max-width: 150px;
-    margin-top: 10px;
+    max-width: 130px;
+    margin-top: 0;
   }
 
   .hero-text h3 {
@@ -421,15 +409,38 @@ body.dark-mode .social-icons a {
     gap: 10px;
   }
 
-  .project-list {
-    gap: 20px;
-  }
-
-  #contact-form {
-    width: 100%;
-  }
-
   .social-icons a {
     font-size: 28px;
+  }
+}
+
+/* Responsive: Tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hero {
+    padding: 60px 0;
+  }
+
+  .hero-img img {
+    max-width: 250px;
+  }
+}
+
+/* Responsive: Laptops */
+@media screen and (min-width: 1025px) {
+  .hero-container {
+    flex-direction: row;
+  }
+
+  .hero-text,
+  .hero-img {
+    text-align: left;
+  }
+
+  .hero-img {
+    order: 1;
+  }
+
+  .hero-text {
+    order: 0;
   }
 }
