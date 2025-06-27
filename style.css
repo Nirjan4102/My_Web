@@ -418,7 +418,7 @@ body.dark-mode .social-icons a {
   .social-icons {
     justify-content: center;
     gap: 20px;
-    margin-top: -10px;
+    margin-top: 64px; /* ✅ 4-line gap between buttons and social icons */
     margin-bottom: 30px;
   }
 
