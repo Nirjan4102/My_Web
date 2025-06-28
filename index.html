@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <meta name="google-site-verification" content="TC-vIyMagjms77b4qg5TQNoEx_rI7oG3Y4qiTyFFPW8" />
+  <meta name="google-site-verification" content="TC-vIyMagjms77b4qg5TQNoEx_rI7oG3Y4qiTyFFPW8" />
   <title>Nirjan Mondal | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
 <body>
   <header>
     <div class="container nav-container">
-      <h2 class="logo">Nirjan<span>.</span></h2>
+      <h2 class="logo">Nirjan Mondal<span>.</span></h2>
       <nav>
         <ul class="nav-links">
           <li><a href="#">Home</a></li>
@@ -64,10 +64,10 @@
     <div class="container">
       <h2 data-aos="fade-up">About Me</h2>
       <p data-aos="fade-up" data-aos-delay="100">
-       Hi everyone! I’m <strong>Nirjan Mondal</strong>, a third-year B.Tech student in Computer Science and Engineering at the University of Kalyani. I’m passionate about coding, problem-solving, and everything related to computer science.
+        Hi everyone! I’m <strong>Nirjan Mondal</strong>, a third-year B.Tech student in Computer Science and Engineering at the University of Kalyani. I’m passionate about coding, problem-solving, and everything related to computer science.
       </p>
       <p data-aos="fade-up" data-aos-delay="200">
-       Let’s connect and explore exciting opportunities to collaborate, learn, and innovate together!
+        Let’s connect and explore exciting opportunities to collaborate, learn, and innovate together!
       </p>
     </div>
   </section>
@@ -79,7 +79,7 @@
         <div class="project" data-aos="fade-up">
           <h3>Micro Learning Tracker</h3>
           <p>A tool to track daily micro-learning progress for students.</p>
-          <a href=" https://nirjan4102.github.io/Micro-learning/" target="_blank">Explore Project</a>
+          <a href="https://nirjan4102.github.io/Micro-learning/" target="_blank">Explore Project</a>
         </div>
         <div class="project" data-aos="fade-up" data-aos-delay="100">
           <h3>Meal Market Calculator</h3>
@@ -104,27 +104,29 @@
     </div>
   </section>
 
+  <!-- ✅ Copyright Footer -->
+  <footer class="footer">
+    <p>© 2025 Nirjan Mondal. All rights reserved.</p>
+  </footer>
+
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
 
-    // Typed.js effect
     new Typed("#typed", {
-      strings: ["CSE Student","Website Developer", "Full-Stack Engineer"],
+      strings: ["CSE Student", "Website Developer", "Full-Stack Engineer"],
       typeSpeed: 60,
       backSpeed: 30,
       backDelay: 2000,
       loop: true,
     });
 
-    // Dark mode toggle
     const themeToggle = document.getElementById("theme-toggle");
     themeToggle.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
       themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
     });
 
-    // Contact form validation
     document.getElementById("contact-form").addEventListener("submit", function (e) {
       e.preventDefault();
       const name = this.name.value.trim();
@@ -143,7 +145,6 @@
       this.reset();
     });
 
-    // Animate buttons/sections on load
     document.querySelectorAll(".animate").forEach((el, i) => {
       el.style.opacity = "0";
       el.style.transform = "translateY(20px)";
