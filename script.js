@@ -1,3 +1,6 @@
+// Initialize EmailJS (replace with your actual public key)
+emailjs.init("vq1362DNesJtq8KoE"); // ⚠️ Replace with your real EmailJS public key
+
 // Typed.js effect
 new Typed("#typed", {
   strings: ["CSE Student", "Website Developer", "Full-Stack Developer"],
@@ -14,7 +17,7 @@ themeToggle.addEventListener("click", () => {
   themeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
 });
 
-// Contact form validation
+// Contact form validation + EmailJS
 document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -29,9 +32,17 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     return;
   }
 
-  msgEl.textContent = "✅ Message sent successfully!";
-  msgEl.style.color = "lightgreen";
-  this.reset();
+  // Send email using EmailJS
+  emailjs.sendForm("service_xt4g6ws", "template_gd9f01m", this)
+    .then(() => {
+      msgEl.textContent = "✅ Message sent successfully!";
+      msgEl.style.color = "lightgreen";
+      this.reset();
+    })
+    .catch(() => {
+      msgEl.textContent = "❌ Failed to send message. Please try again.";
+      msgEl.style.color = "red";
+    });
 });
 
 // Animate buttons/sections on load
